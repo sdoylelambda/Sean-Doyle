@@ -6,6 +6,21 @@
 -->
 <html>
   <head>
+    <!-- Prevent FOUC (flash of unstyled content) -->
+		<style>
+		html {
+			visibility: hidden;
+			opacity: 0;
+		}
+		</style>
+
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.documentElement.style.visibility = "visible";
+			document.documentElement.style.opacity = "1";
+		});
+		</script>
+    
     <title>Sean Doyle Portfolio</title>
     <meta charset="utf-8" />
     <meta
